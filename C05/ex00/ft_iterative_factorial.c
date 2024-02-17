@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vmoroz <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/20 16:37:34 by vmoroz            #+#    #+#             */
+/*   Updated: 2023/06/20 16:37:36 by vmoroz           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+int	ft_iterative_factorial(int nb)
+{
+	unsigned int	result;
+
+	result = 1;
+	while (nb > 0)
+	{
+		result *= nb;
+		nb--;
+	}
+	if (nb < 0)
+	{
+		return (0);
+	}
+	return (result);
+}
+int	main(void)
+{
+	int nb;
+	nb = 10;
+	printf("Factorial is: %d", ft_iterative_factorial(nb));
+	return (0);
+}
